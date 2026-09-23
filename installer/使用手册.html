@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>掌中界 · 使用手册</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1c1d21; --dim:#5f666f; --line:#0000001f; --card:#faf9f6; --bg:#ececea; --blue:#1f5fd0; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e7e8ec; --dim:#9aa1ab; --line:#ffffff24; --card:#17181c; --bg:#0e0f12; --blue:#5fa0ff; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 20px 80px; background:var(--bg); color:var(--fg);
+         font: 15px/1.75 "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; }
+  main { max-width: 820px; margin: 0 auto; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: .01em; }
+  .sub { color: var(--dim); margin: 0 0 28px; }
+  h2 { font-size: 20px; margin: 34px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 20px 0 6px; }
+  p, li { margin: 6px 0; }
+  code, kbd { font-family: Consolas, monospace; font-size: 13px; background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; }
+  kbd { box-shadow: 0 1px 0 var(--line); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 14px 0; }
+  .lead { border-color: var(--blue); }
+  ol, ul { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--dim); font-weight: 600; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:999px; border:1px solid var(--blue); color:var(--blue); font-size:12px; margin-right:6px; }
+  footer { margin-top: 50px; color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>掌中界 · 使用手册</h1>
+  <p class="sub">把网页、文件夹、便签当成一张张草纸摆在画布上 —— 随手拖、随手推开、一键存成模板。</p>
+
+  <div class="card lead">
+    <h3>30 秒上手（只要这三下）</h3>
+    <ol>
+      <li><b>鼠标移到卡片上</b> → 上方浮出<b>标题栏</b> → 按住标题栏就能拖动卡片。</li>
+      <li><b>在空白画布上右键</b> → <b>新建便签 / 新建网页 / 新建文件夹</b>（想放什么就放什么）。</li>
+      <li>想一键开工：左栏点<b>「模板」</b> → 选一张（或先用「保存为模板」把现在的画布存下来）。</li>
+    </ol>
+  </div>
+
+  <h2>一、界面地图</h2>
+  <table>
+    <tr><th>位置</th><th>是什么</th></tr>
+    <tr><td>最左边竖栏</td><td>工具栏：新建、网页、文件夹、便签、待办、模板、设置（齿轮 / <kbd>Ctrl</kbd>+<kbd>,</kbd>）</td></tr>
+    <tr><td>顶部</td><td>画布名、<b>搜索框</b>（<kbd>Ctrl</kbd>+<kbd>K</kbd>：搜网址 / 搜磁盘）、保存、模板、最近使用、截图</td></tr>
+    <tr><td>中间大片</td><td><b>画布</b>：卡片就摆在这里。空白处右键出菜单。</td></tr>
+    <tr><td>右下角</td><td>当前画布名、层级 <code>L1</code>、缩放百分比</td></tr>
+    <tr><td>右侧（点开）</td><td>空间导航器：列出所有卡片和子画布，点一下就能定位</td></tr>
+  </table>
+
+  <h2>二、画布操作</h2>
+  <ul>
+    <li><b>缩放</b>：滚轮（以鼠标位置为中心）。</li>
+    <li><b>平移</b>：按住<b>鼠标中键</b>拖动，或按住空格拖。</li>
+    <li><b>框选</b>：在空白处按住左键拉框。</li>
+    <li><b>多选</b>：<kbd>Ctrl</kbd> 点选，或 <kbd>Ctrl</kbd>+<kbd>A</kbd> 全选。</li>
+  </ul>
+
+  <h2>三、拖动卡片：两种手感</h2>
+  <h3>① 推开草纸（白板风专属）</h3>
+  <p>设置 → 画布风格选 <span class="tag">白板风（浅色）</span> 或 <span class="tag">白板风（深色）</span> 之后：
+     拖着卡片去撞别的卡，挡路的卡会<b>让开一条缝</b>；你松手或者往回拖，它<b>不会弹回原处</b>。</p>
+  <ul>
+    <li>往左推，左边的卡往左让；同一次拖动里再往右推，右边的卡往右让 —— 不会互相盖住。</li>
+    <li>竖着推同理：往上推，上面的卡往上让。</li>
+    <li>默认的「深色玻璃」皮肤<b>不会</b>推开挡路的卡（这是设计如此）。</li>
+  </ul>
+  <h3>② Ctrl + 拖标题栏 = 拖出一份副本</h3>
+  <p>按住 <kbd>Ctrl</kbd> 再拖标题栏，原件和邻居都不动，只有副本跟着鼠标走。</p>
+  <h3>③ 靠近就会吸</h3>
+  <p>把卡片拖到另一张旁边（或叠上）会提示对齐 / 融合，松手就贴齐；两张网页卡叠在一起会融合成一个子画布。</p>
+
+  <h2>四、卡片类型</h2>
+  <table>
+    <tr><th>类型</th><th>用途 & 小技巧</th></tr>
+    <tr><td>便签</td><td>记一句话。点一下就能改字；空便签会自己消失。</td></tr>
+    <tr><td>待办清单</td><td>带勾选框，套用模板时勾会清零（每天从没打勾开始）。</td></tr>
+    <tr><td>网页卡</td><td>真实网页窗口。可缩放、可静音；<kbd>Ctrl</kbd>+滚轮在卡内缩放网页。</td></tr>
+    <tr><td>文件夹卡</td><td>就是一个文件夹窗口。可以直接拖文件进去。</td></tr>
+    <tr><td>子画布</td><td>两张网页卡叠一起就融合成一层；右下 HUD 显示 <code>L1/L2</code> 层级。</td></tr>
+    <tr><td>参考板 / 图片卡</td><td>放参考图、PDF，拖进来即可。</td></tr>
+  </table>
+
+  <h2>五、模板：一键开工</h2>
+  <ul>
+    <li><b>存</b>：左栏「保存画布为模板」（或卡片右键 → 保存现在的画布为模板），起个名字。</li>
+    <li><b>用</b>：左栏「模板」→ 浮层里选一张 → 进入画布。浮层顶部有搜索框，模板多了也能秒找。</li>
+    <li><b>改</b>：从模板开出来的画布，改完再存会问你「覆盖更新 / 另存为新模板」。</li>
+    <li><b>开机自动</b>：模板浮层底部勾「开机自动套用默认模板」，下次打开直接进那张画布。</li>
+  </ul>
+
+  <h2>六、常用快捷键</h2>
+  <table>
+    <tr><th>按键</th><th>作用</th></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td>顶部搜索（网址 / 磁盘文件）</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>保存画布</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>,</kbd></td><td>打开设置（字号、皮肤都在这里）</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+点</td><td>全选 / 加选</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+拖标题栏</td><td>拖出一份副本</td></tr>
+    <tr><td>中键拖 / 滚轮</td><td>平移 / 缩放画布</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>关掉当前浮层 / 取消选择</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>A</kbd></td><td>截图（若被其它软件占用会提示注册失败）</td></tr>
+  </table>
+
+  <h2>七、看着不舒服就调这两处</h2>
+  <ul>
+    <li><b>字太小</b>：设置 → <b>界面字号</b> → 小 / 标准 / <b>大 / 特大</b>（整站等比放大，画布、面板、卡片标题都会跟着变）。</li>
+    <li><b>白底上字看不清 / 想要深色</b>：设置 → <b>画布风格</b> → 白板风（浅色）/ 白板风（深色）/ 默认（深色玻璃）。</li>
+  </ul>
+
+  <h2>八、数据在哪 / 换电脑</h2>
+  <ul>
+    <li>所有数据都在 <code>%LOCALAPPDATA%\掌中界</code>（会话、模板、缩略图、剪贴历史）。<b>卸载不会删</b>，想恢复出厂就删掉这个文件夹。</li>
+    <li>换电脑：装好程序，把这些文件夹拷过去即可：<code>Templates</code>（模板）、<code>Session</code>（上次的画布）、<code>settings.json</code>（设置）。</li>
+    <li>单张画布要给别人：卡片右键 → 导出参考板 / 打包到目录。</li>
+  </ul>
+
+  <h2>九、常见问题</h2>
+  <table>
+    <tr><th>现象</th><th>原因 / 处理</th></tr>
+    <tr><td>拖卡片撞别的卡，为什么不让开？</td><td>只有「白板风」皮肤会推开挡路的卡；默认深色玻璃不会。去设置换皮肤。</td></tr>
+    <tr><td>网页卡 / 文件夹卡打开很慢</td><td>卡里是真实的窗口，第一次打开要几秒，之后会缓存。</td></tr>
+    <tr><td>桌面没有图标</td><td>重装一次，安装时把「创建桌面快捷方式」勾上（1.0.94 起默认已勾选）。</td></tr>
+    <tr><td>字还是小</td><td>设置 → 界面字号 → 特大；再配合系统显示缩放。</td></tr>
+    <tr><td>提示缺少 WebView2</td><td>安装器会自动装（那一步要联网）；也可手动装微软的 WebView2 运行时。</td></tr>
+  </table>
+
+  <footer>
+    掌中界 · 使用手册 · 随程序安装在本目录下（<code>使用手册.html</code>）<br>
+    设置 → 使用手册 → 「打开使用手册…」随时可以再打开这一页。
+  </footer>
+</main>
+</body>
+</html>

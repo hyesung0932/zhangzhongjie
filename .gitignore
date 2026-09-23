@@ -1,0 +1,36 @@
+# ── 依赖与前端构建产物 ──
+node_modules/
+dist/
+artifacts/
+.packages/
+*.tsbuildinfo
+
+# ── 原生构建产物 ──
+native/bin/
+native/obj/
+native/.vs/
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+
+# ── 分发副本与安装包（体积太大，走 GitHub Releases，不入库）──
+run/
+installer/output/
+*.exe
+*.msi
+*.zip
+*.7z
+
+# ── 本地备份（改动留底，不进仓库）──
+*.bak
+*.bak-*
+
+# ── 第三方二进制 / 参考素材（不是本项目的代码）──
+tools/ocr/RapidOCR-json/
+tools/ui-motion-src/
+
+# ── 本地笔记（不公开）──
+HANDOFF-下一轮.md
+REVIEW-GUIDE.md
+开源前检查清单.md

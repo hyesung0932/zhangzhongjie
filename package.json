@@ -1,0 +1,30 @@
+{
+  "name": "zhangzhongjie",
+  "private": true,
+  "version": "1.0.94",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "desktop:build": "powershell -ExecutionPolicy Bypass -File ./native/build.ps1",
+    "desktop:run": "powershell -NoProfile -Command \"& './native/bin/x64/Release/掌中界.exe'\"",
+    "manual": "powershell -NoProfile -Command \"Start-Process ./installer/使用手册.html\""
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "6.0.2",
+    "dompurify": "^3.4.15",
+    "marked": "^18.0.12",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
+  },
+  "description": "掌中界 —— Windows 空间画布工作台：把网页、文件夹、便签当成草纸铺在无限画布上（C++ + WebView2 + React）",
+  "license": "MIT",
+  "author": "hyesung0932"
+}
