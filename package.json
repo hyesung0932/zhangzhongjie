@@ -25,6 +25,6 @@
     "@types/react-dom": "19.2.3"
   },
   "description": "掌中界 —— Windows 空间画布工作台：把网页、文件夹、便签当成草纸铺在无限画布上（C++ + WebView2 + React）",
-  "license": "MIT",
+  "license": "BUSL-1.1",
   "author": "hyesung0932"
 }

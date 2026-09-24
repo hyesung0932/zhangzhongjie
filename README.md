@@ -8,7 +8,7 @@
 - 平台：Windows 10 / 11（x64）
 - 技术栈：C++ 宿主 + WebView2 + React 19 / TypeScript / Vite
 - 体积：安装包约 47 MB（自带 WebView2 运行时与离线 OCR，装完直接能用）
-- 许可：MIT
+- 许可：BSL 1.1 —— 个人 / 学习 / 公司内部使用免费，对外商业销售需先取得授权，**2030-09-24 起自动转为 MIT**（[中文说明](LICENSE-中文说明.md)）
 
 ![空画布与新手引导](docs/screenshots/01-empty-board.png)
 ![设置面板](docs/screenshots/02-settings-fontsize.png)
@@ -155,10 +155,18 @@ docs/               截图与文档
 
 ## 许可
 
-[MIT](LICENSE)
+本项目采用 [**Business Source License 1.1**](LICENSE)（BUSL-1.1，MariaDB 起草的标准协议，HashiCorp / Sentry 等在用）：
+
+- **免费**：个人使用、学习研究、非营利组织、**任何组织的内部使用**（公司里当工具用、内部部署都算）
+- **需先取得授权**：把掌中界（或修改版）当商品卖、随收费产品打包分发、或做成对外收费的托管服务
+- **到期自动解锁**：2030-09-24 起自动转为 [MIT](LICENSE)，此后无任何商业限制
+- 人话版说明见 [LICENSE-中文说明.md](LICENSE-中文说明.md)；想商用或不确定算不算商用，开 Issue 聊
+
+> 说明：本仓库 v1.0.94 之前公开发布过的版本是按 MIT 授权出去的，那部分许可无法回收；
+> BSL 只对之后发布的版本生效。
 
 ---
 
 **English**: *ZhangZhongJie* is a spatial desktop workspace for Windows — web pages, folders and sticky notes
 live as cards on one infinite canvas you can pan and zoom, push aside, nest into sub-canvases and save as templates.
-Built with a native C++ host + WebView2 + React. Windows 10/11 only, MIT licensed.
+Built with a native C++ host + WebView2 + React. Windows 10/11 only. Source-available under the Business Source License 1.1 — free for personal, educational and internal business use; commercial resale or a paid hosted service requires a license from the author; converts to MIT on 2030-09-24.
